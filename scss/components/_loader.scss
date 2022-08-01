@@ -1,0 +1,54 @@
+.components-loader {
+    @include MB {
+        gap: m(21);
+        font-size: m(18);
+        line-height: m(28);
+    }
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999999;
+    background: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: p(21);
+    font-weight: 500;
+    font-size: p(18);
+    line-height: p(28);
+    text-align: center;
+    color: #2a59dc;
+
+    &.hide {
+        opacity: 0;
+        visibility: hidden;
+        transition: all 100ms ease-out;
+    }
+
+    & > .item {
+        @include MB {
+            width: m(55);
+            height: m(55);
+            border: m(2) black solid;
+        }
+        width: p(55);
+        height: p(55);
+        border: p(2) black solid;
+        animation: loader 1000ms ease infinite;
+    }
+
+    @keyframes loader {
+        0% {
+            transform: rotate(0deg);
+        }
+
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}

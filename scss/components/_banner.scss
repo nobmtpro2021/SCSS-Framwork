@@ -1,0 +1,296 @@
+.components-banner {
+    @include MB {
+        height: unset;
+        min-height: m(500);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: unset;
+    }
+    position: relative;
+    width: 100%;
+    // height: p(820);
+    min-height: p(600);
+    overflow: hidden;
+    z-index: 1;
+    padding-bottom: p(100);
+
+    & > .image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        img {
+            width: 100%;
+            height: 150%;
+            object-fit: cover;
+            filter: brightness(0.9);
+            transition: all 300ms ease;
+        }
+    }
+
+    & > .subtitle {
+        @include MB {
+            font-size: m(16);
+            line-height: m(32);
+            letter-spacing: m(3);
+            margin-bottom: 0;
+            margin-top: m(0);
+            margin-left: p(0);
+            text-align: center;
+        }
+        font-weight: 400;
+        font-size: p(16);
+        line-height: p(32);
+        letter-spacing: p(3);
+        text-transform: uppercase;
+        color: #2a59dc;
+        margin-bottom: 0;
+        margin-top: p(278);
+        position: relative;
+        z-index: 2;
+        margin-left: p(182);
+    }
+
+    & > .title {
+        @include MB {
+            width: 100%;
+            height: 100%;
+            font-weight: 800;
+            font-size: m(72);
+            line-height: m(80);
+            letter-spacing: m(-2);
+            margin-left: p(0);
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+        font-weight: 800;
+        font-size: p(72);
+        line-height: p(80);
+        letter-spacing: p(-2);
+        color: #ffffff;
+        position: relative;
+        z-index: 2;
+        margin-left: p(182);
+
+        &.blog {
+            @include MB {
+                margin-top: m(0);
+                width: 100%;
+                font-size: m(60);
+                line-height: m(65);
+            }
+            margin-top: p(242);
+            width: p(639);
+        }
+    }
+
+    & > .label {
+        @include MB {
+            padding: m(4) m(12);
+            font-size: m(12);
+            line-height: m(18);
+            border-radius: m(16);
+            margin-top: m(17);
+            margin-left: p(0);
+        }
+
+        display: inline-block;
+        padding: p(4) p(12);
+        font-weight: 500;
+        font-size: p(12);
+        line-height: p(18);
+        color: white;
+        background: #e74042;
+        border-radius: p(16);
+        margin-top: p(17);
+        position: relative;
+        z-index: 2;
+        margin-left: p(182);
+    }
+
+    & > .home {
+        @include MB {
+            margin-top: unset;
+            margin-left: unset;
+            background: #000000;
+            border-radius: m(5);
+            padding: m(30) m(30);
+            width: m(390);
+            transform: translateY(m(20));
+        }
+
+        margin-top: p(192);
+        margin-left: p(63);
+        background: #000000;
+        border-radius: p(3);
+        width: p(642);
+        padding: p(58) p(72);
+        position: relative;
+        z-index: 2;
+
+        & > .text-sm {
+            @include MB {
+                font-weight: 400;
+                font-size: m(16);
+                line-height: m(32);
+                letter-spacing: unset;
+                margin-bottom: m(10);
+            }
+
+            font-weight: 400;
+            font-size: p(16);
+            line-height: p(32);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #2a59dc;
+            margin-bottom: p(20);
+        }
+
+        & > .text-bg {
+            @include MB {
+                font-weight: 900;
+                font-size: m(40);
+                line-height: m(50);
+                letter-spacing: unset;
+                margin-bottom: m(40);
+            }
+
+            font-weight: 900;
+            font-size: p(60);
+            line-height: p(80);
+            color: white;
+            margin-bottom: p(50);
+        }
+
+        & > .buttons {
+            @include MB {
+                gap: m(20);
+            }
+
+            display: flex;
+            align-items: center;
+            gap: p(50);
+
+            & > .button-red {
+                @include MB {
+                    padding: m(14) m(41.47);
+                    background: #e74042;
+                    border-radius: m(5);
+                    font-weight: 800;
+                    font-size: m(16);
+                    line-height: m(21);
+                }
+
+                padding: p(14) p(41.47);
+                background: #e74042;
+                border-radius: p(3);
+                color: white;
+                font-weight: 800;
+                font-size: p(16);
+                line-height: p(21);
+                cursor: pointer;
+                position: relative;
+
+                @include PC {
+                    &:hover {
+                        &::before {
+                            width: 100%;
+                        }
+
+                        span {
+                            transition: all 300ms ease;
+                            position: relative;
+                            z-index: 1;
+                            color: #23307d;
+                        }
+                    }
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: p(3);
+                    background: white;
+                    box-sizing: border-box;
+                    width: 0;
+                    transition: all 300ms ease;
+                    // opacity: 0;
+                }
+            }
+
+            & > .button-watch {
+                @include MB {
+                    gap: m(16);
+                    font-weight: 400;
+                    font-size: m(16);
+                    line-height: m(32);
+                }
+
+                display: flex;
+                align-items: center;
+                gap: p(16);
+                font-weight: 400;
+                font-size: p(16);
+                line-height: p(32);
+                color: white;
+                position: relative;
+                @include PC {
+                    padding-left: p(60);
+                    transition: all 300ms ease;
+                }
+
+                & > .image {
+                    @include MB {
+                        width: m(48);
+                        height: m(48);
+                    }
+                    width: p(48);
+                    height: p(48);
+
+                    @include PC {
+                        position: absolute;
+                        transition: all 300ms ease;
+                        background: white;
+                        border-radius: p(50);
+                        left: 0;
+                        img {
+                            width: p(48);
+                            height: p(48);
+                        }
+                    }
+                }
+
+                & > .text {
+                    position: relative;
+                    z-index: 1;
+                    transition: all 300ms ease;
+                }
+
+                @include PC {
+                    &:hover {
+                        // &::before{
+                        //     clip-path: inset(0 0 0 0);
+                        // }
+                        & > .text {
+                            color: black;
+                        }
+
+                        & > .image {
+                            // top: 0;
+                            // left: 0;
+                            width: 115%;
+                            height: p(48) !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

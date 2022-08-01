@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    font-family: "Inter", sans-serif;
+}
+
+html {
+    background: white;
+}
+
+body {
+    background: white;
+    position: relative;
+    z-index: -99999;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    color: currentColor;
+    @include PC {
+        cursor: pointer;
+    }
+
+    @include MB {
+        cursor: none;
+    }
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+input:focus {
+    outline: none;
+}

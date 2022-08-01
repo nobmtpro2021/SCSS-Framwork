@@ -1,0 +1,237 @@
+.components-footer {
+    @include MB {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 0;
+        margin-top: m(100);
+    }
+    display: flex;
+    justify-content: space-between;
+    gap: 0;
+    margin-top: p(115);
+
+    & > .left {
+        @include MB {
+            width: 100%;
+            background: #0f9447;
+            display: flex;
+            flex-direction: column;
+            padding-left: m(16);
+            padding-top: m(30);
+            padding-bottom: m(30);
+        }
+
+        width: p(528);
+        background: #0f9447;
+        display: flex;
+        flex-direction: column;
+        padding-left: p(112);
+        padding-top: p(70);
+        padding-bottom: p(70);
+
+        & > .logo {
+            @include MB {
+                padding: m(17) m(32);
+                padding-left: m(64);
+                border-radius: 0px 0px 0px m(30);
+                margin-bottom: m(30);
+            }
+
+            display: inline-block;
+            background: white;
+            padding: p(17) p(32);
+            padding-left: p(64);
+            border-radius: 0px 0px 0px p(30);
+            margin-bottom: p(62);
+
+            & > img {
+                @include MB {
+                    width: m(320);
+                }
+
+                width: p(320);
+            }
+        }
+
+        & > .description {
+            @include MB {
+                font-weight: 400;
+                font-size: m(10);
+                line-height: m(30);
+                line-height: unset;
+                margin-right: m(0);
+                margin-bottom: m(30);
+            }
+
+            font-weight: 400;
+            font-size: p(18);
+            line-height: p(28);
+            color: white;
+            margin-right: p(46);
+            margin-bottom: p(48);
+        }
+
+        & > .socials {
+            @include MB {
+                gap: m(24);
+            }
+
+            display: flex;
+            gap: p(24);
+            align-items: center;
+            flex-wrap: wrap;
+
+            & > a {
+                @include MB {
+                    width: m(24);
+                    height: m(24);
+                }
+
+                width: p(24);
+                height: p(24);
+                overflow: hidden;
+
+                &:hover {
+                    img {
+                        filter: brightness(0) saturate(100%) invert(19%)
+                            sepia(39%) saturate(4449%) hue-rotate(215deg)
+                            brightness(92%) contrast(88%);
+                    }
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: all 100ms ease;
+                    filter: brightness(5000%);
+                }
+            }
+        }
+    }
+
+    & > .right {
+        @include MB {
+            flex: unset;
+            padding-top: m(30);
+        }
+
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding-top: p(107);
+      
+
+        & > .slogans {
+            @include MB {
+                display: flex;
+                flex-direction: column;
+                gap: m(30);
+                margin-bottom: m(30);
+                padding-left: p(0);
+                padding-left: m(16);
+                padding-right: m(16);
+            }
+
+            display: flex;
+            gap: p(131);
+            margin-bottom: p(88);
+            padding-left: p(102);
+
+            & > .slogan {
+                @include MB {
+                    gap: m(24);
+                }
+
+                display: flex;
+                gap: p(24);
+                align-items: center;
+
+                & > img {
+                    @include MB {
+                        width: m(50);
+                    }
+
+                    width: p(50);
+                }
+
+                & > .text {
+                    @include MB {
+                        font-size: m(22);
+                        line-height: m(25);
+                        width: m(143);
+                    }
+                    font-weight: 700;
+                    font-size: p(22);
+                    line-height: p(25);
+                    color: #1f449c;
+                    width: p(143);
+                }
+            }
+        }
+
+        & > .links {
+            @include MB {
+                padding-left: p(0);
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                gap: m(16);
+                padding-left: m(16);
+                padding-right: m(16);
+                padding-bottom: m(30);
+            }
+
+            display: flex;
+            justify-content: space-between;
+            padding-left: p(102);
+            padding-bottom: p(56);
+
+            & > ul {
+                @include MB {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    list-style: none;
+                    gap: m(16);
+                    font-size: m(13);
+                    line-height: m(20);
+                }
+
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                list-style: none;
+                gap: p(16);
+                font-weight: 600;
+                font-size: p(14);
+                line-height: p(20);
+                li {
+                    @include MB {
+                        width: m(300);
+                    }
+
+                    width: p(226);
+                }
+            }
+        }
+
+        & > .policy {
+            @include MB {
+                padding: m(16) m(0);
+                text-align: center;
+                font-size: m(16);
+                line-height: m(24);
+            }
+
+            margin-top: auto;
+            padding: p(16) p(104);
+            background: #1f449c;
+            font-weight: 400;
+            font-size: p(16);
+            line-height: p(24);
+            color: #98a2b3;
+        }
+    }
+}
